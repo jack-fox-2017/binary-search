@@ -27,7 +27,7 @@ function binary_search (search, array) {
   var maxIndex = array.length-1;
 
   while (lowIndex<=maxIndex) {
-    midIndex = Math.floor(((midIndex + maxIndex)/2));
+    midIndex = Math.floor(((lowIndex + maxIndex)/2));
     var midElement = array[midIndex];
     if(midElement < search) {
       lowIndex = midIndex + 1;
@@ -36,7 +36,9 @@ function binary_search (search, array) {
     } else {
       return midIndex
     }
+
   }
+  return -1
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap)

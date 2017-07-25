@@ -17,14 +17,29 @@ function ownSort(arr) {
   return temp
 }
 
-function binarySearch(search, array) {
+function binarySearch(search, array, start, end) {
   // Your searching code
-  for (var i = 0; i < array.length; i++) {
-    if (search == array[i]) {
-      return i
-    }
+
+  if (start == undefined) {
+    start = 0;
   }
-  return -1
+  if (end == undefined) {
+    end = array.length - 1;
+  }
+
+  let mid = Math.floor((start + end) / 2);
+  if (end < start) {
+    return -1;
+  }
+  else if (search > array[mid]) {
+    return binarySearch(search, array, mid + 1, end);
+  }
+  else if (search < array[mid]) {
+    return binarySearch(search, array, start, mid - 1);
+  }
+  else {
+    return mid;
+  }
 }
 
 var arrayGenapSorted = ownSort(testArrayGenap)

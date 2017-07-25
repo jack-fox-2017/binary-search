@@ -1,0 +1,12 @@
+    1. Tentukan posisi awal = 0 dan posisi akhir = N-1.
+    2. Buat kondisi perulangan, jika posisi awal kurang dari atau sama dengan posisi akhir
+    3. Hitung posisi tengah = (posisi awal + posisi akhir)/2.
+    4. Bandingkan data yang dicari dengan elemen posisi tengah.
+       -     Jika sama maka catat posisi dan cetak kemudian berhenti.
+
+       -     Jika lebih besar maka akan dilakukan pencarian kembali kebagian kanan dengan posisi awal =        
+            posisi tengah +1 dan posisi akhir tetap kemudian ulangi mulai poin 2.
+
+       -    Jika lebih kecil maka akan di lakukan pencarian kembali ke bagian kiri dengan nilai posisi awal 
+            tetap dan nilai posisi akhir  = posisi tengah-1 kemudian ulangi mulai poin 2.
+    5. jika kondisi if tidak terpenuhi, keluar loop return -1

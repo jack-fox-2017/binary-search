@@ -24,7 +24,7 @@ function binarySearch (search, array) {
   var bTengah = Math.floor((bBawah+bAtas)/2)
   // console.log(bTengah);
 
-  for (let i=0; i<array.length; i++) {
+  while (bBawah<=bAtas) {
     // console.log('bAtas:',bAtas);
     // console.log('bBawah:',bBawah);
     // console.log('bTengah:',bTengah);

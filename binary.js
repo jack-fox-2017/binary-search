@@ -17,14 +17,23 @@ function ownSort(arr) {
   return arr
 }
 
-function binary_search (search, array) {
+function binary_search (search, arr) {
   // Your searching code
-  for(let i=0;i<array.length;i++){
-    if(array[i]===search){
-      return i;
-    }
+  let min = 0;
+	let max = arr.length - 1;
+  let guess;
+  while ( min <= max){
+      guess = Math.floor((min+max)/2);
+      if(arr[guess] === search){
+        return guess;
+      }
+      else if(arr[guess] < search){
+        min = guess+1;
+      }
+      else{
+        max = guess - 1;
+      }
   }
-  //return 0;
   return -1;
 }
 

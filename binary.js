@@ -21,9 +21,9 @@ function binary_search (search, arr) {
   // Your searching code
   let min = 0;
 	let max = arr.length - 1;
-  let guess;
+
   while ( min <= max){
-      guess = Math.floor((min+max)/2);
+      let guess = Math.floor((min+max)/2);
       if(arr[guess] === search){
         return guess;
       }
